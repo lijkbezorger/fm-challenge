@@ -1,0 +1,12 @@
+<mat-toolbar>
+  <span>{{ 'appTitle' | translate }}</span>
+</mat-toolbar>
+<mat-drawer-container autosize class="fmc-main-layout">
+  <mat-drawer mode="side" opened="true">
+    <fmc-menu></fmc-menu>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,33 @@
+@use "@angular/material" as mat;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  mat-toolbar {
+    padding: 8px 12px;
+    background: var(--mat-sys-primary-container);
+    font-family: var(--mat-sys-display-large), sans-serif;
+  }
+
+  mat-drawer-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  mat-drawer {
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 0;
+    border-right: 1px solid var(--mat-sys-outline);
+  }
+
+  mat-drawer-content {
+    display: flex;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+}

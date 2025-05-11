@@ -1,0 +1,24 @@
+{
+  "appTitle": "Meine App",
+  "menu": {
+    "home": "Home",
+    "pokemon": "Pokemon (de)",
+    "finmatics": "Finmatics"
+  },
+  "common": {
+    "loading": "Lade..."
+  },
+  "pokemon": {
+    "table": {
+      "id": {
+        "label": "Id"
+      },
+      "name": {
+        "label": "Name"
+      },
+      "url": {
+        "label": "URL"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div class="fmc-menu">
+  <mat-list role="list">
+    @for (page of pages; track page.title) {
+      <mat-list-item role="listitem">
+        <mat-icon matListItemIcon [fontIcon]="page.icon"/>
+        <a [routerLink]="page.path" matListItemTitle>
+          {{ page.title | translate }}
+        </a>
+      </mat-list-item>
+    }
+  </mat-list>
+</div>

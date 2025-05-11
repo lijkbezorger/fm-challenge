@@ -1,0 +1,11 @@
+<fmc-pokemon-table
+  [isLoading]="(isLoading$ | async) || false"
+  [pokemons]="(pokemons$ | async) || []"
+  [pageSize]="(pageSize$ | async) || 0"
+  [currentPage]="(currentPage$ | async) || 0"
+  [total]="(total$ | async) || 0"
+  [columnsDefinition]="columnsDefinition"
+  [pageSizes]="pageSizes"
+  (pageEvent)="triggerPageEvent($event)"
+>
+</fmc-pokemon-table>

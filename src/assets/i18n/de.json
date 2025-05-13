@@ -3,7 +3,7 @@
   "menu": {
     "home": "Home",
     "pokemon": "Pokemon (de)",
-    "finmatics": "Finmatics"
+    "weather": "Wettervorhersage"
   },
   "common": {
     "loading": "Lade..."
@@ -18,6 +18,20 @@
       },
       "url": {
         "label": "URL"
+      }
+    }
+  },
+  "weather": {
+    "title": "Wettervorhersage",
+    "table": {
+      "date": {
+        "label": "Datum"
+      },
+      "time": {
+        "label": "Uhrzeit"
+      },
+      "temperature": {
+        "label": "Temperatur °C"
       }
     }
   }

@@ -2,9 +2,9 @@ import { Routes } from '@angular/router';
 
 import { Paths } from '@configs/paths';
 
-export const FINMATICS_ROUTER: Routes = [
+export const WEATHER_ROUTER: Routes = [
   {
-    path: Paths.FINMATICS,
+    path: Paths.WEATHER,
     loadComponent: () => import('./pages/challenge-page/challenge-page.component').then((c) => c.ChallengePageComponent),
   },
 ];

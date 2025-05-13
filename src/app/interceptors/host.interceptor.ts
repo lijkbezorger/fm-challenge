@@ -11,7 +11,13 @@ export const hostInterceptor = (req: HttpRequest<unknown>, next: HttpHandlerFn):
   }
 
   const route = url.replace(/^\//, '');
-  const host = environment.host.replace(/\/$/, '');
 
-  return next(req.clone({ url: `${host}/${route}` }));
+  if (url.includes('pokemon')) {
+    const pokemonAPI = environment.pokemonAPI.replace(/\/$/, '');
+    return next(req.clone({ url: `${pokemonAPI}/${route}` }));
+  }
+
+
+  const weatherAPI = environment.weatherAPIURL.replace(/\/$/, '');
+  return next(req.clone({ url: `${weatherAPI}/${route}` }));
 };

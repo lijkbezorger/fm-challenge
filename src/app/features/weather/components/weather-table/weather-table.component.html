@@ -1,0 +1,31 @@
+<div class="fmc-pokemon-table">
+  @if (hoursForecast() && !isLoading()) {
+    <div class="fmc-pokemon-table__table">
+      <table class="mat-elevation-z8" mat-table [dataSource]="hoursForecast()">
+        <tr mat-header-row *matHeaderRowDef="columnsConfig()"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnsConfig();"></tr>
+
+        @for (column of columnsDefinition(); track column.field) {
+          <ng-container [matColumnDef]="column.field">
+            <th mat-header-cell *matHeaderCellDef>{{ column.label | translate }}</th>
+            <td mat-cell *matCellDef="let element">
+              @switch (column.pipe) {
+                @case ('date') {
+                  {{ element[column.field] | timestampToDate }}
+                }
+                @case ('time') {
+                  {{ element[column.field] | timestampToTime }}
+                }
+                @default {
+                  {{ element[column.field] }}
+                }
+              }
+            </td>
+          </ng-container>
+        }
+      </table>
+    </div>
+  } @else {
+    {{ 'common.loading' | translate }}
+  }
+</div>

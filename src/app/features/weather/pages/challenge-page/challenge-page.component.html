@@ -1,0 +1,7 @@
+<h1>{{ 'weather.title' | translate}}</h1>
+
+<fmc-weather-table
+  [hoursForecast]="(weatherForcast$ | async) || []"
+  [isLoading]="isLoading()"
+  [columnsDefinition]="columnDefinitions"
+></fmc-weather-table>

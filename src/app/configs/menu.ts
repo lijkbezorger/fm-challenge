@@ -13,8 +13,8 @@ export const PAGES: PageDefinition[] = [
     icon: 'catching_pokemon',
   },
   {
-    title: 'menu.finmatics',
-    path: Paths.FINMATICS,
-    icon: 'book',
+    title: 'menu.weather',
+    path: Paths.WEATHER,
+    icon: 'sunny',
   }
 ];
